@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    android:label="Summary"
+    app:startDestination="@id/flavorsFragment">
+
+    <fragment
+        android:id="@+id/flavorsFragment"
+        android:name="com.example.pizza.ui.flavors.FlavorsFragment"
+        android:label="Flavors"
+        tools:layout="@layout/fragment_flavors">
+        <action
+            android:id="@+id/action_flavorsFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment"
+            app:popUpTo="@id/flavorsFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.example.pizza.ui.summary.SummaryFragment"
+        android:label="Summary"
+        tools:layout="@layout/fragment_summary" />
+</navigation>
